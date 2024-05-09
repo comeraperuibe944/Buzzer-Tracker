@@ -44,7 +44,7 @@ def downRange(start, stop, step):
     yield start
     start -= abs(step)
 
-# Describe this function...
+# Changing musical notes with A button
 def SettingsChangeNote():
   global varBtnACounter, varCursor, listChart, varTrueCounter, i, varPagina, mapNotesNames, constSpaces, label0, labelSettings, label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15
   if varBtnACounter==1:
@@ -66,7 +66,7 @@ def SettingsChangeNote():
   else:
     listChart[int(varTrueCounter - 1)] = ' '
 
-# Describe this function...
+# Update screen labels
 def RefreshAllLabelsText():
   global varBtnACounter, varCursor, listChart, varTrueCounter, i, varPagina, mapNotesNames, constSpaces, label0, labelSettings, label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15
   label2.setText(str((str(((str(((str((varPagina / 10))).replace('.', ''))) + str(constSpaces)))) + str((listChart[int((varPagina + 0) - 1)])))))
@@ -84,7 +84,7 @@ def RefreshAllLabelsText():
   label14.setText(str((str(((str((varPagina + 12)) + str(constSpaces)))) + str((listChart[int((varPagina + 12) - 1)])))))
   label15.setText(str((str(((str((varPagina + 13)) + str(constSpaces)))) + str((listChart[int((varPagina + 13) - 1)])))))
 
-# Describe this function...
+# Updates selection
 def RefreshCursorPosition():
   global varBtnACounter, varCursor, listChart, varTrueCounter, i, varPagina, mapNotesNames, constSpaces, label0, labelSettings, label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15
   if varCursor==0:
@@ -120,7 +120,7 @@ def RefreshCursorPosition():
   else:
     pass
 
-# Describe this function...
+# Updates all labels to default color
 def RefreshAllLabelsColors():
   global varBtnACounter, varCursor, listChart, varTrueCounter, i, varPagina, mapNotesNames, constSpaces, label0, labelSettings, label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11, label12, label13, label14, label15
   label1.setColor(0x33ff33, 0x000000)
